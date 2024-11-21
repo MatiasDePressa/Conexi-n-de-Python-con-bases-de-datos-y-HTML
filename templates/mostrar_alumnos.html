@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mostrar Alumnos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <a href="/">Volver</a>
+    <br>
+    <a href="/actualizar_alumno">Actulizar</a>
+    <div class="padre">
+        <div class="hijo">
+            <h1>Listado De Alumnos</h1>
+            <table border="1">
+                <thead>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Edad</th>
+                    <th>Carrera</th>
+                    <th>Nota</th>
+                    <th>Botones</th>
+                </thead>
+                <tbody>
+                    {% for alumno in alumnos %}
+                    <tr>
+                        <td>{{ alumno[0] }}</td>
+                        <td>{{ alumno[1] }}</td>
+                        <td>{{ alumno[2] }}</td>
+                        <td>{{ alumno[3] }}</td>
+                        <td>{{ alumno[4] }}</td>
+                        <td>{{ alumno[5] }}</td>
+                        <td> 
+                            <a href="/eliminar/{{ alumno[0] }}">Eliminar</a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

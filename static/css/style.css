@@ -1,0 +1,87 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #363636;
+    color: #a7a7a7;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #162fbd;
+}
+
+a {
+    color: #4849ad;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Container styles */
+.padre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.hijo {
+    background: #302d2d;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    box-sizing: border-box;
+}
+
+/* Form styles */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input, select, button {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #5a5a5a;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #201979;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #162875;
+}
+
+/* Table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #000000;
+    text-align: left;
+    color: beige;
+}
+
+th {
+    background-color: #2c2c2c;
+}

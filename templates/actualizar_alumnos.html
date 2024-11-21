@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actualizar Alumnos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="padre">
+        <div class="hijo">
+            <h1>Actualizar Alumno</h1>
+            <form action="/actualizar" method="post">
+
+                <label for="id">Seleccione un ID: </label>
+                <select name="id" id="id">
+                    <option value="" disabled selected>Seleccionar un ID</option>
+                    {% for alumno in alumnos %}
+                    <option value="{{ alumno[0] }}">{{ alumno[0] }}</option>
+                    {% endfor %}
+                </select>
+
+                <label for="nombre">Nombre: </label>
+                <input type="text" name="nombre" id="nombre" required><br>
+
+                <label for="apellido">Apellido: </label>
+                <input type="text" name="apellido" id="apellido" required><br>
+
+                <label for="edad">Edad: </label>
+                <input type="number" name="edad" id="edad" required><br>
+
+                <label for="carrera">Carrera: </label>
+                <input type="text" name="carrera" id="carrera" required><br>
+
+                <label for="nota">Nota: </label>
+                <input type="number" name="nota" id="nota" required><br>
+
+                <button type="submit">Actualizar</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
